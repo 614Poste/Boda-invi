@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Great_Vibes } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 /*
@@ -56,6 +57,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${fuente.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
