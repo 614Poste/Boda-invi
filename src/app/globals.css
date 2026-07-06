@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/*
+  Paleta de la invitación (migrada del HTML original):
+  - beige/taupe principal  rgba(171,164,150) -> #ABA496
+  - beige claro secundario rgba(201,193,176) -> #C9C1B0
+  - fondo gris claro        rgba(235,235,235) -> #EBEBEB
+*/
+@theme {
+  --color-boda: #aba496;
+  --color-boda-soft: #c9c1b0;
+  --color-boda-bg: #ebebeb;
+}
+
+/*
+  La fuente se define en layout.tsx (next/font) y expone la variable
+  --font-boda. `inline` hace que la utilidad `font-script` inline el valor,
+  resolviéndose en el elemento donde se usa (donde vive la variable).
+*/
+@theme inline {
+  --font-script: var(--font-boda);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #aba496;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  /* Fuente única de la invitación (ver layout.tsx para cambiarla) */
+  font-family: var(--font-boda), cursive;
+}
+
+/* Los controles de formulario no heredan la fuente: forzamos la cursiva */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Animación de rebote reutilizada por el botón e íconos */
+@keyframes boda-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes boda-jump {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
