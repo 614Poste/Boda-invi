@@ -62,7 +62,7 @@ export default function Parents() {
       {padrinos.length > 0 && (
         <>
           <h2 className="mb-12 mt-16 text-4xl text-boda">
-            Y en compañía de nuestros padrinos
+            Y en compañía de nuestros hijos
           </h2>
           <ListaPersonas personas={padrinos} />
         </>

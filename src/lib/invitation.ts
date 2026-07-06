@@ -36,13 +36,13 @@ export const invitacion = {
   novia: "Cecy",
   novio: "Carlos",
   subtitulo: "25 Aniversario",
-  subtitulo2: "Boda de Plata",
+  subtitulo2: "Bodas de Plata",
   fechaTexto: "25 de Julio",
   // Fecha objetivo del contador (año-mes-día)
   fechaEvento: "2026-07-25T00:00:00",
 
   mensaje:
-    "Con amor: \n Queremos agradecer a cada uno de ustedes por acompañarnos nuetra boda de plata.\n Nos sentimos afortunados de estar rodeados de nuetros seres queridos con quienes hemos tenido la oportunidad de compartir momentos inolvidables. \n Esperemos pasar un dia memorable",
+    "Con amor: \n Queremos agradecer a cada uno de ustedes por acompañarnos nuetra Bodas de plata.\n Nos sentimos afortunados de estar rodeados de nuetros seres queridos con quienes hemos tenido la oportunidad de compartir momentos inolvidables. \n Esperemos pasar un dia memorable",
 
   // Imagen de fondo de la portada (detrás de los nombres)
   portada: "/Fotos/Portada/portada.jpeg",
@@ -68,8 +68,8 @@ export const invitacion = {
   personas: [
     { rol: "Padres De La Novia", nombres: ["Guadalupe Chaires", "Cipriano de la Cruz"], tipo: "padres" },
     { rol: "Padres Del Novio", nombres: ["Manuela Espinoza", "Antonio López ✝️"], tipo: "padres" },
-    { rol: "Madrina", nombres: ["Michelle López"], tipo: "padrinos" },
-    { rol: "Padrino", nombres: ["Carlos López"], tipo: "padrinos" },
+    { rol: "Hija", nombres: ["Michelle López"], tipo: "padrinos" },
+    { rol: "Hijo", nombres: ["Carlos López"], tipo: "padrinos" },
   ] as Persona[],
 
   // --- Ubicaciones ---
@@ -147,7 +147,7 @@ export const invitacion = {
   ],
 
   // --- Música de fondo ---
-  musica: "/Musica/14.mp3",
+  musica: "/Musica/Whitney.mp3",
 };
 
 export type Invitacion = typeof invitacion;
