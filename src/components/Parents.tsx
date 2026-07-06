@@ -1,5 +1,18 @@
 import { invitacion, type Persona } from "@/lib/invitation";
 import Reveal from "./Reveal";
+import { CrossIcon } from "./Icons";
+
+/** Muestra un nombre; si termina en "✝️" lo reemplaza por una cruz SVG. */
+function Nombre({ texto }: { texto: string }) {
+  const enMemoria = /✝️?\s*$/.test(texto);
+  const limpio = texto.replace(/✝️?\s*$/, "").trim();
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      {limpio}
+      {enMemoria && <CrossIcon className="inline h-[0.9em] w-[0.9em] text-boda" />}
+    </span>
+  );
+}
 
 /** Lista de personas (padres o padrinos) con su rol y nombres. */
 function ListaPersonas({ personas }: { personas: Persona[] }) {
@@ -13,7 +26,7 @@ function ListaPersonas({ personas }: { personas: Persona[] }) {
           <p className="mt-2 text-[27px] text-boda-soft">
             {persona.nombres.map((nombre, i) => (
               <span key={nombre}>
-                {nombre}
+                <Nombre texto={nombre} />
                 {i < persona.nombres.length - 1 && (
                   <>
                     <br />

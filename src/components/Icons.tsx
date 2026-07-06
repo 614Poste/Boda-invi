@@ -59,6 +59,15 @@ export function WhatsAppIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+/** Cruz elegante (para indicar "en memoria de", junto a un nombre). */
+export function CrossIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
+      <path d="M13.4 2.2c0-.66-.54-1.2-1.2-1.2h-.4c-.66 0-1.2.54-1.2 1.2V8H4.9c-.66 0-1.2.54-1.2 1.2v.4c0 .66.54 1.2 1.2 1.2h5.7v10.8c0 .66.54 1.2 1.2 1.2h.4c.66 0 1.2-.54 1.2-1.2V10.8h5.7c.66 0 1.2-.54 1.2-1.2v-.4c0-.66-.54-1.2-1.2-1.2h-5.7V2.2Z" />
+    </svg>
+  );
+}
+
 /** Pin de ubicación (para el botón "Cómo llegar"). */
 export function MapPinIcon({ className = "h-5 w-5" }: IconProps) {
   return (

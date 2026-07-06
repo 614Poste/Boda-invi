@@ -64,6 +64,7 @@ export const invitacion = {
   imagenSecundaria: "/Invitaciones/1765644046.png",
 
   // --- Padres, madrinas y padrinos ---
+  // Agrega "✝️" al final de un nombre para mostrar una cruz (en memoria de).
   personas: [
     { rol: "Padres De La Novia", nombres: ["Guadalupe Chaires", "Cipriano de la Cruz"], tipo: "padres" },
     { rol: "Padres Del Novio", nombres: ["Manuela Espinoza", "Antonio López ✝️"], tipo: "padres" },
