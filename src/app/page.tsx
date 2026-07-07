@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { invitacion } from "@/lib/invitation";
 import OpenInvitation from "@/components/OpenInvitation";
+import OpenInvitationPhoto from "@/components/OpenInvitationPhoto";
 import Hero from "@/components/Hero";
 import Countdown from "@/components/Countdown";
 import InvitationMessage from "@/components/InvitationMessage";
@@ -15,7 +15,11 @@ import RsvpForm from "@/components/RsvpForm";
 export default function Home() {
   return (
     <main className="mx-auto max-w-[900px]">
-      <OpenInvitation />
+      {invitacion.apertura.usarVersionFoto ? (
+        <OpenInvitationPhoto />
+      ) : (
+        <OpenInvitation />
+      )}
 
       <Hero />
       <Countdown />
@@ -24,9 +28,6 @@ export default function Home() {
       <Parents />
       <Locations />
       <DressCode />
-
-      
-
       <Itinerary />
       <GiftRegistry />
       <RsvpForm />

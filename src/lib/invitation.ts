@@ -47,6 +47,15 @@ export const invitacion = {
   // Imagen de fondo de la portada (detrás de los nombres)
   portada: "/Fotos/Portada/portada.jpeg",
 
+  // --- Pantalla de apertura ("Abrir Invitación") ---
+  apertura: {
+    // true  = versión NUEVA: foto de fondo a pantalla completa + botón ovalado abajo.
+    // false = versión ORIGINAL: panel lateral blanco "Abrir Invitación".
+    usarVersionFoto: true,
+    // Foto de fondo para la versión nueva.
+    foto: "/Fotos/Abrir/Abrir.jpg",
+  },
+
   // Imagen de referencia del código de vestimenta
   imagenVestimenta: "/Fotos/CodigoVestimenta/vestimenta.jpeg",
 
