@@ -14,6 +14,8 @@ export type Ubicacion = {
   titulo: string;
   lugar: string;
   hora: string; // hora del evento, ej. "19:00"
+  // Texto opcional bajo el lugar (ej. nombre del párroco). Déjalo vacío "" para ocultarlo.
+  detalle?: string;
   icono: "ceremonia" | "recepcion"; // clave del ícono SVG
   // Enlace directo al mapa (Google Maps, Waze, etc.). Déjalo vacío "" y se ocultará el botón.
   mapaUrl: string;
@@ -87,6 +89,7 @@ export const invitacion = {
       titulo: "Ceremonia Religiosa",
       lugar: "Parroquia San Isidro Labrador",
       hora: "17:00",
+      detalle: "Padre: Párroco Ricardo Ríos Velasco",
       icono: "ceremonia",
       mapaUrl: "https://maps.app.goo.gl/9y9u5eouV52Jj5vV9", // pega aquí el link de Google Maps
       foto: "/Fotos/Ubicaciones/CapillaSanIsidro.png",
@@ -109,6 +112,7 @@ export const invitacion = {
 
   // --- Código de vestimenta ---
   codigoVestimenta: "Formal",
+  notaVestimenta: "Se reserva el color plateado para la novia",
 
   // --- Itinerario ---
   itinerario: [

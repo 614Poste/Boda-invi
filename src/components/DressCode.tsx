@@ -23,6 +23,14 @@ export default function DressCode() {
         </h2>
       </Reveal>
 
+      {invitacion.notaVestimenta && (
+        <Reveal delay={250}>
+          <p className="mx-auto mt-3 max-w-[400px] px-4 text-[22px] text-boda">
+            {invitacion.notaVestimenta}
+          </p>
+        </Reveal>
+      )}
+
       <Reveal delay={300}>
         <Image
           src={invitacion.imagenVestimenta}

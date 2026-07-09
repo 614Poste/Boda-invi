@@ -26,13 +26,7 @@ export default function GiftRegistry() {
         “{invitacion.mensajeRegalos}”
       </p>
 
-      <div className="mt-12 flex flex-col gap-8">
-        {invitacion.notasExtra.map((nota) => (
-          <h3 key={nota} className="text-3xl text-boda">
-            {nota}
-          </h3>
-        ))}
-      </div>
+     
     </section>
   );
 }

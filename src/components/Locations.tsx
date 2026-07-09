@@ -43,6 +43,14 @@ export default function Locations() {
               <p className="mb-4 text-[22px] text-boda">{u.hora} hrs</p>
             </Reveal>
 
+            {u.detalle && (
+              <Reveal delay={470}>
+                <p className="-mt-2 mb-4 text-[22px] text-boda-soft">
+                  {u.detalle}
+                </p>
+              </Reveal>
+            )}
+
             {u.mapaUrl && (
               <Reveal delay={500}>
                 <a
